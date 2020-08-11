@@ -6,7 +6,9 @@ body {
 div.page {
     height: 100vh;
     display: grid;
-    grid-template-areas: 'header header' 'meny meny' 'mainContent mainContent' 'footer footer';
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas: 'meny header sidebar' 'meny mainContent sidebar' 'footer footer footer';
 }
 
 
@@ -33,4 +35,19 @@ div.mainContent {
 div.footer {
     background-color: darkolivegreen;
     grid-area: footer;
+}
+
+div.sidebar {
+    background-color: indianred;
+    grid-area: sidebar;
+}
+
+@media only screen and (max-width:600px) {
+    div.page {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 10fr 1fr;
+        grid-template-areas: 'header' 'meny' 'mainContent' 'footer';
+    }
 }
