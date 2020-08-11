@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>knappelek</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(5,90px)
+        }
+
+        button {
+            background-color: thistle;
+            width: 90px;
+            height: 90px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button>
+
+
+    <script>
+        lysOppKnapp();
+        function lysOppKnapp() {
+            let knapper = document.getElementsByTagName('button');
+            let index = Math.floor(Math.random() * 25);
+            let knapp = knapper[index];
+            knapp.style.backgroundColor = 'blue';
+        }
+
+        function velgKnapp(knapp) {
+            if (knapp.style.backgroundColor === 'blue') {
+                knapp.style.backgroundColor = 'thistle';
+                lysOppKnapp();
+
+            }
+        }
+    </script>
+
+</body>
+</html>
