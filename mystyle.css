@@ -6,7 +6,7 @@ body {
 div.page {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 2fr 10fr 1fr;
     grid-template-rows: 1fr 10fr 1fr;
     grid-template-areas: 'meny header sidebar' 'meny mainContent sidebar' 'footer footer footer';
 }
@@ -48,6 +48,6 @@ div.sidebar {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 10fr 1fr;
-        grid-template-areas: 'header' 'meny' 'mainContent' 'footer';
+        grid-template-areas: 'header' 'meny' 'mainContent' 'footer' 'sidebar';
     }
 }
