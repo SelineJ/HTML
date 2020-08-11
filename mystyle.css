@@ -1,9 +1,36 @@
-
 body {
-    background-color: blanchedalmond;
+    padding: 0;
+    margin: 0;
 }
 
-h1 {
+div.page {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 'header header' 'meny meny' 'mainContent mainContent' 'footer footer';
+}
+
+
+/*h1 {
     color: cornflowerblue;
     font-family: fantasy;
+}*/
+
+div.header {
+    background-color: crimson;
+    grid-area: header;
+}
+
+div.meny {
+    background-color: chocolate;
+    grid-area: meny;
+}
+
+div.mainContent {
+    background-color: darkmagenta;
+    grid-area: mainContent;
+}
+
+div.footer {
+    background-color: darkolivegreen;
+    grid-area: footer;
 }
