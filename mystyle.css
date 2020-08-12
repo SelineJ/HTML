@@ -1,53 +1,59 @@
-body {
-    padding: 0;
-    margin: 0;
-}
-
-div.page {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 2fr 10fr 2fr;
-    grid-template-rows: 1fr 10fr 1fr;
-    grid-template-areas: 'meny header sidebar' 'meny mainContent sidebar' 'footer footer footer';
-}
-
-
-/*h1 {
-    color: cornflowerblue;
-    font-family: fantasy;
-}*/
-
-div.header {
-    background-color: crimson;
-    grid-area: header;
-}
-
-div.meny {
-    background-color: chocolate;
-    grid-area: meny;
-}
-
-div.mainContent {
-    background-color: darkmagenta;
-    grid-area: mainContent;
-}
-
-div.footer {
-    background-color: darkolivegreen;
-    grid-area: footer;
-}
-
-div.sidebar {
-    background-color: indianred;
-    grid-area: sidebar;
-}
-
-@media only screen and (max-width:600px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
     div.page {
         height: 100vh;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 10fr 1fr;
-        grid-template-areas: 'header' 'meny' 'mainContent' 'footer' 'sidebar';
+        grid-template-columns: 2fr 10fr 200px;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas: 'meny header sidebar' 'meny mainContent sidebar' 'footer footer footer';
     }
-}
+    
+    #menyOverskrift {
+        color: cornflowerblue;
+        font-family: fantasy;
+        padding-left: 10px;
+    }
+    
+    h1 {
+        color: whitesmoke;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding-left: 10px;
+    }
+    
+    div.header {
+        background-color: crimson;
+        grid-area: header;
+    }
+    
+    div.meny {
+        background-color: chocolate;
+        grid-area: meny;
+    }
+    
+    div.mainContent {
+        background-color: darkmagenta;
+        grid-area: mainContent;
+    }
+    
+    div.footer {
+        background-color: darkolivegreen;
+        grid-area: footer;
+    }
+    
+    div.sidebar {
+        background-color: indianred;
+        grid-area: sidebar;
+    }
+    
+    @media only screen and (max-width:600px) {
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 10fr 1fr;
+            grid-template-areas: 'header' 'meny' 'mainContent' 'footer' 'sidebar';
+        }
+    }
