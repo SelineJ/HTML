@@ -8,7 +8,7 @@
         display: grid;
         grid-template-columns: 2fr 10fr 200px;
         grid-template-rows: 1fr 10fr 1fr;
-        grid-template-areas: 'meny header sidebar' 'meny mainContent sidebar' 'footer footer footer';
+        grid-template-areas: 'meny header header' 'meny mainContent sidebar' 'footer footer footer';
     }
     
     #menyOverskrift {
@@ -20,12 +20,20 @@
     h1 {
         color: whitesmoke;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        padding-left: 10px;
+        padding-left: 15px;
+    }
+    
+    li,
+    a {
+        font-size: 16pt;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: thistle;
     }
     
     div.header {
         background-color: crimson;
         grid-area: header;
+        text-align: center;
     }
     
     div.meny {
@@ -36,11 +44,15 @@
     div.mainContent {
         background-color: darkmagenta;
         grid-area: mainContent;
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-right: 15px;
     }
     
     div.footer {
         background-color: darkolivegreen;
         grid-area: footer;
+        padding-left: 15px;
     }
     
     div.sidebar {
@@ -53,7 +65,7 @@
             height: 100vh;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 10fr 1fr;
-            grid-template-areas: 'header' 'meny' 'mainContent' 'footer' 'sidebar';
+            grid-template-rows: 1fr 1fr 10fr 150px;
+            grid-template-areas: 'header' 'meny' 'mainContent''sidebar' 'footer';
         }
     }
